@@ -13,29 +13,29 @@ public static void main(String [] args) {
     
     Scanner myScanner = new Scanner (System.in);
     
-    System.out.print("Enter the original cost of the check in the form xx.xx: ");
+    System.out.print("Enter the original cost of the check in the form xx.xx: ");//Prompt for input of check cost
     
-        double checkCost = myScanner.nextDouble();
+        double checkCost = myScanner.nextDouble();//Store check cost as double value
     
-    System.out.print("Enter the percentage tip that you wish to pay as a whole number (in the form xx): ");
+    System.out.print("Enter the percentage tip that you wish to pay as a whole number (in the form xx): ");//Prompt for input of tip
     
-        double tipPercent = myScanner.nextDouble();
+        double tipPercent = myScanner.nextDouble();//Store tip as double value
     
             tipPercent /= 100; //Divide tip by 100 to convert to decimal
     
-    System.out.print("Enter the number of people who went out to dinner: ");
+    System.out.print("Enter the number of people who went out to dinner: ");//Prompt for input of # of people
     
-        int numPeople = myScanner.nextInt();
+        int numPeople = myScanner.nextInt();//Store people as int value
         
-        double totalCost;
-        double costPerPerson;
-        int dollars;
-        totalCost = checkCost * (1 + tipPercent);
-        costPerPerson = totalCost / numPeople;
-        dollars=(int)costPerPerson;
-        int dimes=(int)(costPerPerson*10) % 10;
-        int pennies=(int)(costPerPerson * 100) % 10;
-        System.out.println("Each person in the group owes $" +dollars+ '.' + dimes + pennies);
+        double totalCost;//declare variable
+        double costPerPerson;//declare variable
+        int dollars;//declare variable
+        totalCost = checkCost * (1 + tipPercent);//include formula
+        costPerPerson = totalCost / numPeople;//include formula
+        dollars=(int)costPerPerson;//explicitly cast as integer
+        int dimes=(int)(costPerPerson*10) % 10;//.1
+        int pennies=(int)(costPerPerson * 100) % 10;//.01
+        System.out.println("Each person in the group owes $" +dollars+ '.' + dimes + pennies);//Print amount owed per person
         
     
     
